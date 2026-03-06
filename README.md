@@ -25,7 +25,6 @@ A lightweight Human Resource Management System for managing employee records and
 | Frontend | HTML, CSS, JavaScript (Vanilla) |
 | Backend  | Python, FastAPI               |
 | Database | PostgreSQL 15                 |
-| Server   | Nginx (reverse proxy)         |
 | Deploy   | Docker & Docker Compose       |
 
 ---
