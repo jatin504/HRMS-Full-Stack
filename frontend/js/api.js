@@ -2,7 +2,7 @@
    API Wrapper – all fetch calls go through here
    ═══════════════════════════════════════════════════════════════ */
 
-const API_BASE = window.HRMS_CONFIG?.API_URL || '/api';
+const API_BASE = window.HRMS_CONFIG?.API_URL || '__API_URL_PLACEHOLDER__';
 
 const api = {
     /**
