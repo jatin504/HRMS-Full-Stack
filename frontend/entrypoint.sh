@@ -3,11 +3,15 @@
 # Default API URL if not provided
 API_URL=${API_URL:-/api}
 
-echo "Injecting API_URL: $API_URL"
+echo "Generating js/config.js with API_URL: $API_URL"
 
-# Replace the placeholder in all JS files
-# We use | as a delimiter in case the URL contains slashes
-find /usr/share/nginx/html/js -name "*.js" -exec sed -i "s|__API_URL_PLACEHOLDER__|$API_URL|g" {} +
+# Generate a config file that can be loaded by index.html
+# This is much more robust than sed-ing existing files
+cat <<EOF > /usr/share/nginx/html/js/config.js
+window.HRMS_CONFIG = {
+  API_URL: '$API_URL'
+};
+EOF
 
 # Execute the CMD (start Nginx)
 exec "$@"
