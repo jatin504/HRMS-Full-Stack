@@ -2,7 +2,7 @@
    API Wrapper – all fetch calls go through here
    ═══════════════════════════════════════════════════════════════ */
 
-const API_BASE = "https://hrms-full-stack-ikum.onrender.com";
+const API_BASE = "https://hrms-full-stack-ikum.onrender.com/api";
 
 const api = {
     /**
